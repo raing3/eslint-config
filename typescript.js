@@ -5,6 +5,38 @@ module.exports = {
         '@typescript-eslint/array-type': 'error',
         '@typescript-eslint/consistent-type-definitions': 'error',
         '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/naming-convention': [
+            'error',
+            {
+                selector: 'default',
+                format: ['camelCase']
+            },
+            {
+                selector: 'variable',
+                format: ['camelCase', 'UPPER_CASE']
+            },
+            {
+                selector: 'parameter',
+                format: ['camelCase']
+            },
+            {
+                selector: 'memberLike',
+                modifiers: ['private'],
+                format: ['camelCase']
+            },
+            {
+                selector: 'typeLike',
+                format: ['PascalCase']
+            },
+            {
+                selector: 'enumMember',
+                format: ['PascalCase']
+            },
+            {
+                selector: 'property',
+                format: ['camelCase', 'UPPER_CASE']
+            }
+        ],
         '@typescript-eslint/no-extra-non-null-assertion': 'error',
         '@typescript-eslint/no-implied-eval': 'error',
         '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
@@ -18,7 +50,6 @@ module.exports = {
         '@typescript-eslint/no-unnecessary-type-arguments': 'error',
         '@typescript-eslint/no-unsafe-call': 'error',
         '@typescript-eslint/no-unsafe-return': 'error',
-        '@typescript-eslint/no-unused-vars': 'error',
         '@typescript-eslint/no-unused-vars-experimental': ['error', { ignoreArgsIfArgsAfterAreUsed: true }],
         '@typescript-eslint/prefer-as-const': 'error',
         '@typescript-eslint/prefer-function-type': 'error',
@@ -32,6 +63,8 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
         'brace-style': 'error',
         '@typescript-eslint/brace-style': 'error',
+        camelcase: 'off',
+        '@typescript-eslint/camelcase': 'off',
         'comma-spacing': 'off',
         '@typescript-eslint/comma-spacing': 'error',
         'default-param-last': 'off',
@@ -48,6 +81,8 @@ module.exports = {
         '@typescript-eslint/no-extra-semi': 'error',
         'no-unused-expressions': 'off',
         '@typescript-eslint/no-unused-expressions': 'error',
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': 'error',
         'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'error',
         quotes: 'off',

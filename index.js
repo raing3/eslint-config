@@ -181,7 +181,11 @@ module.exports = {
         'no-useless-rename': 'error',
         'no-var': 'error',
         'prefer-arrow-callback': 'error',
-        'prefer-const': 'error',
+        'prefer-const': [
+            'error', {
+                destructuring: 'all'
+            }
+        ],
         'prefer-numeric-literals': 'error',
         'prefer-rest-params': 'error',
         'prefer-spread': 'error',
