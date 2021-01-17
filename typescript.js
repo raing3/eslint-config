@@ -3,7 +3,7 @@ module.exports = {
         // TypeScript
         // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules
         '@typescript-eslint/array-type': 'error',
-        '@typescript-eslint/consistent-type-definitions': 'error',
+        '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/naming-convention': [
             'error',
