@@ -1,6 +1,6 @@
 {
   "name": "@raing3/eslint-config",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Preferred linting rules for my JS packages",
   "main": "index.js",
   "author": "Richard Ainger",
