@@ -7,7 +7,7 @@ Shareable ESLint config for my JS projects.
 Run the following in your project directory:
 
 ```
-npm install @raing3/eslint-config --save-dev
+npm install eslint @raing3/eslint-config --save-dev
 ```
 
 ## Usage
@@ -20,27 +20,27 @@ Add the following to your ESLint config file:
 
 ```
 {
-  "extends": [
-    "eslint:recommended",
-    "@raing3/eslint-config"
-  ]
+  "extends": ["@raing3/eslint-config"]
 }
 ```
 
 **TypeScript:**
 
-Install the [TypeScript ESLint plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin) and follow configuration instructions.
+Install the [TypeScript ESLint plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin):
+
+```
+npm install @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
+```
 
 Add the following to your ESLint config file:
 
 ```
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "@raing3/eslint-config",
-    "@raing3/eslint-config/typescript"
-  ]
+  "extends": ["@raing3/eslint-config/typescript"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  }
 }
 ```
 
@@ -48,15 +48,19 @@ Add the following to your ESLint config file:
 
 **Jest:**
 
-Install the [Jest ESLint plugin](https://www.npmjs.com/package/eslint-plugin-jest) and follow configuration instructions.
+Install the [Jest ESLint plugin](https://www.npmjs.com/package/eslint-plugin-jest):
+
+```
+npm install eslint-plugin-jest --save-dev
+```
 
 Add the following to your ESLint config file:
 
 ```
 {
-  "extends": [
-    "plugin:jest/recommended",
-    "@raing3/eslint-config/jest"
-  ]
+  "extends": ["@raing3/eslint-config/jest"],
+  "env": {
+    "jest": true
+  }
 }
 ```

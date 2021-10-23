@@ -1,4 +1,5 @@
 module.exports = {
+    'extends': ['eslint:recommended'],
     rules: {
         // The rules below are listed in the order they appear on the eslint rules page.
         // http://eslint.org/docs/rules/
@@ -8,7 +9,10 @@ module.exports = {
         // ---------------------------------------------
         'no-console': 'error',
         'no-extra-parens': 'error',
+        'no-promise-executor-return': 'error',
         'no-template-curly-in-string': 'error',
+        'no-unreachable-loop': 'error',
+        'no-unsafe-optional-chaining': 'error',
         'require-atomic-updates': 'error',
 
         // Best Practices
@@ -20,6 +24,7 @@ module.exports = {
         complexity: 'error',
         'consistent-return': 'error',
         curly: 'error',
+        'default-case-last': 'error',
         'dot-location': ['error', 'property'],
         'dot-notation': 'error',
         'default-param-last': 'error',
@@ -75,16 +80,6 @@ module.exports = {
         'no-shadow': 'error',
         'no-undef-init': 'error',
         'no-use-before-define': 'error',
-
-        // Node.js and CommonJS
-        // http://eslint.org/docs/rules/#nodejs-and-commonjs
-        // -------------------------------------------------
-        'global-require': 'error',
-        'no-buffer-constructor': 'error',
-        'no-mixed-requires': 'error',
-        'no-new-require': 'error',
-        'no-path-concat': 'error',
-        'no-process-exit': 'error',
 
         // Stylistic Issues
         // http://eslint.org/docs/rules/#stylistic-issues
@@ -190,6 +185,7 @@ module.exports = {
         'prefer-rest-params': 'error',
         'prefer-spread': 'error',
         'rest-spread-spacing': 'error',
+        'sort-imports': ['warn', { ignoreCase: true }],
         'symbol-description': 'error',
         'template-curly-spacing': 'error',
         'yield-star-spacing': 'error'
