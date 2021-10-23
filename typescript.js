@@ -1,10 +1,27 @@
 module.exports = {
+    'extends': [
+        '@raing3/eslint-config',
+        'plugin:@typescript-eslint/recommended'
+    ],
+    plugins: ['@typescript-eslint'],
     rules: {
         // TypeScript
         // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules
         '@typescript-eslint/array-type': 'error',
         '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/member-delimiter-style': [
+            'warn', {
+                multiline: {
+                    delimiter: 'semi',
+                    requireLast: true
+                },
+                singleline: {
+                    delimiter: 'comma',
+                    requireLast: false
+                },
+                multilineDetection: 'brackets'
+            }
+        ],
         '@typescript-eslint/naming-convention': [
             'error',
             {
@@ -37,6 +54,9 @@ module.exports = {
                 format: ['camelCase', 'UPPER_CASE']
             }
         ],
+        '@typescript-eslint/no-confusing-non-null-assertion': 'error',
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
         '@typescript-eslint/no-extra-non-null-assertion': 'error',
         '@typescript-eslint/no-implied-eval': 'error',
         '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
@@ -48,15 +68,19 @@ module.exports = {
         '@typescript-eslint/no-unnecessary-condition': 'error',
         '@typescript-eslint/no-unnecessary-qualifier': 'error',
         '@typescript-eslint/no-unnecessary-type-arguments': 'error',
+        '@typescript-eslint/no-unnecessary-type-constraint': 'warn',
         '@typescript-eslint/no-unsafe-call': 'error',
-        '@typescript-eslint/no-unsafe-return': 'error',
-        '@typescript-eslint/no-unused-vars-experimental': ['error', { ignoreArgsIfArgsAfterAreUsed: true }],
+        '@typescript-eslint/non-nullable-type-assertion-style': 'warn',
         '@typescript-eslint/prefer-as-const': 'error',
         '@typescript-eslint/prefer-function-type': 'error',
         '@typescript-eslint/prefer-optional-chain': 'error',
         '@typescript-eslint/prefer-readonly': 'error',
+        '@typescript-eslint/prefer-reduce-type-parameter': 'warn',
+        '@typescript-eslint/prefer-return-this-type': 'warn',
+        '@typescript-eslint/prefer-string-starts-ends-with': 'warn',
         '@typescript-eslint/prefer-ts-expect-error': 'error',
         '@typescript-eslint/restrict-plus-operands': 'error',
+        '@typescript-eslint/type-annotation-spacing': 'warn',
         '@typescript-eslint/unified-signatures': 'error',
 
         // Extension Rules

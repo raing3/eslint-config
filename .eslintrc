@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "./index.js"
-  ],
+  "extends": ["./index.js"],
   "reportUnusedDisableDirectives": true,
   "env": {
     "node": true
