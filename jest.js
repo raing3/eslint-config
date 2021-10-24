@@ -9,19 +9,19 @@ module.exports = {
         'jest/consistent-test-it': ['error', { fn: 'test' }], // eslint-disable-line id-length
         'jest/no-duplicate-hooks': 'error',
         'jest/no-restricted-matchers': [
-            'warn', {
+            'error', {
                 resolves: 'Use `expect(await promise)` instead.',
                 toBeTruthy: 'Avoid `toBeTruthy`',
                 toBeFalsy: 'Avoid `toBeFalsy`'
             }
         ],
         'jest/no-test-return-statement': 'error',
-        'jest/prefer-expect-resolves': 'warn',
+        'jest/prefer-expect-resolves': 'error',
         'jest/prefer-hooks-on-top': 'error',
-        'jest/prefer-to-be': 'warn',
+        'jest/prefer-to-be': 'error',
         'jest/prefer-to-contain': 'error',
-        'jest/prefer-to-have-length': 'warn',
-        'jest/require-to-throw-message': 'warn',
+        'jest/prefer-to-have-length': 'error',
+        'jest/require-to-throw-message': 'error',
         'jest/require-top-level-describe': 'error',
         'jest/prefer-todo': 'error'
     }
