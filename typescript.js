@@ -114,6 +114,8 @@ module.exports = {
         ],
         'no-extra-semi': 'off',
         '@typescript-eslint/no-extra-semi': 'error',
+        'no-shadow': 'off',
+        '@typescript-eslint/no-shadow': 'error',
         'no-unused-expressions': 'off',
         '@typescript-eslint/no-unused-expressions': 'error',
         'no-unused-vars': 'off',
